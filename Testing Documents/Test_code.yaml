@@ -1,0 +1,33 @@
+
+openapi: 3.0.3
+info:
+  title: Order Service
+  version: 1.0.0
+paths:
+  /orders:
+    post:
+      summary: Place a new order
+      requestBody:
+        required: true
+      responses:
+        "201":
+          description: Order created
+    get:
+      summary: List all orders
+      responses:
+        "200":
+          description: Paginated list
+  /orders/{orderId}:
+    parameters:
+      - in: path
+        name: orderId
+        required: true
+        schema: { type: string }
+    get:
+      summary: Get order by ID
+      responses:
+        "200": { description: Found }
+    delete:
+      summary: Cancel order
+      responses:
+        "204": { description: Canceled }

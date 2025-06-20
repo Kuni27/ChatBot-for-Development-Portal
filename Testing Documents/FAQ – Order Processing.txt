@@ -1,0 +1,5 @@
+FAQ – Order Processing
+----------------------
+•  Out-of-stock items: the system cancels the order automatically.
+•  Credit-card validation happens after inventory is confirmed.
+•  Finance triggers shipment once payment is settled.
